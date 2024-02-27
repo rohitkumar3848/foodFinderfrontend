@@ -10,7 +10,8 @@ export default function Home() {
 
   const localData = async () => {
     try {
-      let response = await fetch("http://localhost:8080/api/foodData", {
+      let response =
+       await fetch("https://foodfinderbackend.onrender.com/api/foodData", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

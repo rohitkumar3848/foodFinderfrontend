@@ -19,9 +19,11 @@ export default function Cart() {
   const handleCheckOut = async () => {
     try {
       const userEmail = localStorage.getItem("userEmail");
-      const response = await fetch("http://localhost:8080/api/orderData", {
+      const response =
+       await fetch("https://foodfinderbackend.onrender.com/api/orderData", {
         method: 'POST',
         headers: {
+          
           'Content-Type': 'application/json'
         },
         body: JSON.stringify({
